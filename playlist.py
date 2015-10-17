@@ -17,7 +17,7 @@ result = resp['items']
 
 
 ind = 0
-firstvideo = videolist[ind]['snippet']['resourceId']['videoId']
+firstvideo = result[ind]['snippet']['resourceId']['videoId']
 file = open('playlist.html', 'w')
 file.write('<div class="responsive-video-list"><div class="featured-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+firstvideo+'?autoplay=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1" frameborder="0" allowfullscreen id="FeaturedVideoID"></iframe></div><ul>')
 
