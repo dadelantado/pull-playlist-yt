@@ -1,6 +1,6 @@
 import urllib, json, subprocess, time, sys, getopt
 
-print "Channel?",
+print "Playlist id?",
 playlist = raw_input()
 
 apikey = YOUR_API_KEY_HERE
