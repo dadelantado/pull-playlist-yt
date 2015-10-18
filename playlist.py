@@ -3,7 +3,7 @@ import urllib, json, subprocess, time, sys, getopt
 print "Playlist id?",
 playlist = raw_input()
 
-apikey = YOUR_API_KEY_HERE
+apikey = 'AIzaSyA7s-mBPBU5snEKPZ7CAuLwIuvGa6hRGyc'
 
 #1st Part: retreive uploads id, forUsername(with username) or id (channel id)
 
@@ -18,6 +18,7 @@ result = resp['items']
 
 ind = 0
 #Add the featured video to the playlist
+print 'Generatin playlist ...'
 firstvideo = result[ind]['snippet']['resourceId']['videoId']
 file = open('playlist.html', 'w')
 file.write('<div class="responsive-video-list"><div class="featured-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+firstvideo+'?autoplay=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1" frameborder="0" allowfullscreen id="FeaturedVideoID"></iframe></div><ul>')
@@ -31,7 +32,7 @@ for videos in result:
 
 
 file.write('</ul></div>')#Close dive
-
+print 'Opening HTML file ...'
 #Opening playlist.html on BBEdit
 time.sleep(3)
 cmd = 'bbedit playlist.html'
