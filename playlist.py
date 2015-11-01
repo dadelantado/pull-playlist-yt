@@ -25,7 +25,7 @@ def generatefile(playlistid):
     	file.write('<li><a onclick="switchVideo(\'www.youtube.com/embed/'+videoid+'?autoplay=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autohide=1\');" href="javascript:void(0);"> <img src="http://img.youtube.com/vi/'+videoid+'/0.jpg">'+title+'</a></li>')
     	ind += 1
 
-    file.write('</ul></div>')#Close dive
+    file.write('</ul></div>')#Close div
 
 def openfile():
     print 'Opening HTML file ...'
